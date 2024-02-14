@@ -360,6 +360,7 @@ def main():
         scheduler.step()
 
         print('================================================================')
+        eval_train(model, device, train_loader)
         eval_train(model, device, noisy_train_loader)
         eval_pgd(model, device, noisy_train_loader)
         eval_test(model, device, test_loader)
